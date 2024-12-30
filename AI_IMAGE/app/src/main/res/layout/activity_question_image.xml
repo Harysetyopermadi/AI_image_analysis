@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".Question_Image">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:orientation="vertical"
+                android:id="@+id/lyt_image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+                <ImageView
+                    android:padding="16dp"
+                    android:id="@+id/imageGambar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:background="#CCCCCC" />
+                <ImageView
+                    android:id="@+id/btn_src_img"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/camera"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"/>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/for_btn"
+                android:layout_below="@id/lyt_image"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:hint="Masukan pertanyaan"
+                    android:id="@+id/input_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <Button
+                        android:layout_weight="1"
+                        android:id="@+id/analys_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Analysis Image"
+                        android:layout_gravity="center" />
+                    <Button
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:id="@+id/clear_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Reset"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <ProgressBar
+                android:layout_below="@id/for_btn"
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+            <TextView
+                android:layout_below="@id/for_btn"
+                android:id="@+id/textViewResponse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:paddingTop="16dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
